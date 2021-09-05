@@ -5,15 +5,19 @@ int factorial1(int num) {
 	//the maximum number this function can calculate is up to 12
 	int result = num;
 
-	for (num; num > 1; num--) {
-		result = (num - 1) * result;
+	if (num < 13 && num > 0) {
+		for (num; num > 1; num--) {
+			result = (num - 1) * result;
+		}
 	}
-
-	if (result == 0) {
-		result = 1;
+	else if (num >= 13) {
+		result = (0);
 	}
-	else if (result < 0) {
-		result = 0;
+	else if (num == 0) {
+		result = (1);
+	}
+	else if (num < 0) {
+		result = (0);
 	}
 
 	return result;
